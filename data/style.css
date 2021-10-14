@@ -1,0 +1,13 @@
+* {
+  border-radius: 30px;
+  padding: 8px;
+  text-align: center;
+}
+
+/* dimensionner l img a la fenetre */
+img {
+  padding-left: 5%;
+  max-width: 90%;
+  height: auto;
+  align-items: center;
+}

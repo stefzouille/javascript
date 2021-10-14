@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cours-js events</title>
+
+  <link rel="stylesheet" href="/events/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="clickEvent">
+      <button id="btn">Appuyez !</button>
+      <br>
+      <img src="/events/images/Montage PC.jpeg" id="img"
+        alt="my PC Antec torque">
+      <br>
+
+  </header>
+  <article>
+    <!-- créer le carre de mousse event -->
+    <div class="mouseEvent">
+      <div>Horizontal : <span class="horizontal">0</span></div>
+      <div>Vertical : <span class="vertical">0</span></div>
+    </div>
+    <br>
+    </div>
+  </article>
+  <main>
+
+
+    <!-- recupere les data input -->
+    <div class="inputEvent">
+      <label for="input">Comment va la miff wesh ?</label>
+      <br>
+      <input type="text" id="input">
+      <div id="result"></div>
+      <br>
+      <!-- creer la zone de retranscription du text facon keylogger -->
+      <div>
+        <div class="textEvent">
+          <div>text: <span class="affiche">0</span></div>
+        </div>
+        <div id="result"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- darkmode -->
+  <div class="themeContainer">
+    <div class="theme" id="dark"></div>
+    <div class="theme" id="salmon"></div>
+    <div class="theme" id="yellow"></div>
+  </div>
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>
