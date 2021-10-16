@@ -76,3 +76,19 @@ quand on clock agit sur label et ball */
 .fa-moon {
   color: #333;
 }
+
+/*================================================================*/
+/* partie dark mode du projet*/
+.dark {
+  background: #333;
+}
+.dark main {
+  background: #09fbba;
+}
+.dark .label {
+  box-shadow: 2px 1px 1px #09fbba;
+  background: #888;
+}
+.dark .ball {
+  background: #09fbba;
+}
