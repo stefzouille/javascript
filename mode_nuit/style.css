@@ -84,6 +84,8 @@ quand on clock agit sur label et ball */
 }
 .dark main {
   background: #09fbba;
+  /* agrandi le text en darkmode */
+  font-size: 1.4rem;
 }
 .dark .label {
   box-shadow: 2px 1px 1px #09fbba;
