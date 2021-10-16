@@ -1,3 +1,5 @@
+//toujours a la racine du site
+
 const cacheName = "cache-v1";
 const assets = [
   "/",
