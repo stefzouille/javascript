@@ -1,3 +1,78 @@
-
-
 /*# sourceMappingURL=style.css.map */
+body {
+  background: #eee;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 10px;
+  /* switch mode nuit transition */
+  transition: 0.2s linear;
+  /* on inject une class au body */
+  color: #333;
+}
+
+main {
+  margin: 3rem auto 0;
+  width: 550px;
+  background: rgb(132, 196, 207);
+  padding: 1rem 2rem 2rem;
+  box-shadow: 1px 2px 6px #333;
+  border-radius: 15px;
+}
+.img {
+  background: url(./media/basic-pics/Screen-Shot-2019-04-15-at-10.51.54-PM.png) no-repeat 100% / cover;
+  height: 280px;
+  border-radius: 4px;
+}
+/* faire le boutton toggle */
+.toggle {
+  position: absolute;
+  /* on le met en haut a droite : */
+  right: 2rem;
+  top: 2rem;
+}
+.checkbox {
+  /* faire disparaitre la checkbox :  */
+  display: none;
+}
+/* label englobe les 2 icones */
+.label {
+  height: 26px;
+  width: 50px;
+  background: rgb(182, 182, 182);
+  /* padding pour ecarter un peu */
+  padding: 5px 8px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* pour bouger les icone a l interieur  */
+  position: relative;
+  /* grossir icones : */
+  transform: scale(1.2);
+  box-shadow: 2px 1px 1px #333;
+}
+
+/* parametre ball le curseur */
+.label .ball {
+  background: #eee;
+  border-radius: 50%;
+  height: 26px;
+  width: 26px;
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  /* manniere dont le curseur va permuter */
+  transform: translateX(0px);
+  transition: transform 0.2s cubic-bezier(0.45, -1.12, 0.35, 1.78);
+}
+
+/* derterminer mouvement de la checkbox
+quand on clock agit sur label et ball */
+.checkbox:checked + .label .ball {
+  transform: translateX(29px);
+}
+
+.fa-moon {
+  color: #333;
+}

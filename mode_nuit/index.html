@@ -1,26 +1,57 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-  <title>Bac à sable</title>
+
+  <title>Night mode</title>
 
   <!-- <link href="./assets/bootstrap.css" rel="stylesheet"> -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <link href="./style.css" rel="stylesheet">
 </head>
 
 <body>
+  <!-- toggle c est la checkbox qui permet de switch -->
+  <div class="toggle">
+    <input type="checkbox" class="checkbox" id="dark-mode" />
+    <!-- relier input id et label for -->
+    <label for="dark-mode" class="label">
+      <!-- les icones FontAwesome : -->
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+      <!-- le curseur de gauche a droite -->
+      <div class="ball"></div>
+    </label>
+  </div>
+
+  <main>
+    <h1>Live fast</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem
+      Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an
+      unknown printer took a galley of type and scrambled it to make a type
+      specimen
+      book. It has survived not only five centuries, but also the leap into
+      electronic
+      typesetting, remaining essentially unchanged. It was popularised in the
+      1960s
+      with the release of Letraset sheets containing Lorem Ipsum passages, and
+      more
+      recently with desktop publishing software like Aldus PageMaker including
+      versions of Lorem Ipsum.</p>
+
+    <div class="img"></div>
+  </main>
 
 
-   
-
-
-  <script src="./assets/jquery.min.js" type="text/javascript" ></script>
-  <script src="./assets/bootstrap.js" type="text/javascript" ></script>
-  <script src="./script.js" type="text/javascript" ></script>
+  <script src="./assets/jquery.min.js" type="text/javascript"></script>
+  <script src="./assets/bootstrap.js" type="text/javascript"></script>
+  <script src="./script.js" type="text/javascript"></script>
 </body>
 
 
