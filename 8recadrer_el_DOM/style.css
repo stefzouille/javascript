@@ -10,14 +10,16 @@ body {
   display: flex;
   height: 100vh;
 }
+
+/* donne les dim au bloc a modif par js : */
 .main .top {
   display: flex;
-  flex: 0 0 60%;
+  flex: 0 0 50%;
   flex-direction: row;
   overflow: hidden;
 }
 .main .top .box-1 {
-  background: #77BCFD;
+  background: #77bcfd;
   flex: 0 0 50%;
   position: relative;
 }
