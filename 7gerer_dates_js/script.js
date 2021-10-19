@@ -12,6 +12,8 @@ console.log(today1)
 start.value = today;
 start.min = today;
 
+
+//rajout de l heure en page :
 function pause(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -30,21 +32,29 @@ async function afficherDate() {
 }
 afficherDate();
 
-
+// param dates de retour au lendemain min de start date :
 const tomorrowDate = () => {
   let day = new Date(today);
+  // manipuler le nombre de jour a venir :
   day.setDate(day.getDate() + 1);
   let tomorrow = day.toISOString().split("T")[0];
-  end.min = tomorrow;
   end.value = tomorrow;
+  //empeche le retour ds le passé :
+  end.min = tomorrow;
 };
 tomorrowDate();
 
 start.addEventListener("change", (e) => {
+  // la value de start rentré par l utilisateur on crer une date  :
   let day = new Date(e.target.value);
+  //on lui met 1 jour + 1 :
   day.setDate(day.getDate() + 1);
+  //on convertie la valeur :
   let tomorrow = day.toISOString().split("T")[0];
+  //la valeur input doit au minimun etre tomorrow :
   end.min = tomorrow;
+  //au mini la valeur de input +1 jour :
+  end.value = tomorrow;
 });
 
 end.addEventListener("change", (e) => {
@@ -54,17 +64,25 @@ end.addEventListener("change", (e) => {
   start.max = yesterday;
 });
 
+//total des jours entre depart et arrivée :
 const bookingTotal = () => {
   let date1 = new Date(start.value);
   let date2 = new Date(end.value);
+  //calcul Math en valeur absolute en commence par 2 car value + grande :
   let diffTime = Math.abs(date2 - date1);
+  console.log(diffTime);
 
+  //calcul des jours d ecart en s? passage en jours :
   let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   let nightPrice = document.getElementById("nightPrice").innerHTML;
+  console.log(diffDays);
 
   let total = diffDays * nightPrice;
   document.getElementById("total").innerHTML = total
 };
+
+//des que l input change refait un calcul
 start.addEventListener("change", () => bookingTotal());
 end.addEventListener("change", () => bookingTotal());
+
 bookingTotal();
