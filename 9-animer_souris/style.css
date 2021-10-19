@@ -1,3 +1,44 @@
-
-
 /*# sourceMappingURL=style.css.map */
+* {
+  /* font-family: "Courier New", Courier, monospace; */
+  margin: 1px;
+  padding: 1px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  min-height: 10vh;
+  align-items: center;
+  margin: auto;
+}
+/* ul qui regroupe les 3 li : */
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  /* enlever les dot devant les li */
+  list-style-type: none;
+}
+
+.nav-links li {
+  padding: 1rem;
+}
+
+.nav-links,
+h2 {
+  flex: 1;
+}
+
+.img {
+  height: 60vh;
+  background: url(./media/basic-pics/wp4600617.jpg) no-repeat center/cover;
+  filter: sepia(70%);
+  transition: 3s;
+}
