@@ -77,7 +77,9 @@ const bookingTotal = () => {
   let nightPrice = document.getElementById("nightPrice").innerHTML;
   console.log(diffDays);
 
+  //resultat du nb jours par le price :
   let total = diffDays * nightPrice;
+  //inclure le total ds notre element :
   document.getElementById("total").innerHTML = total
 };
 
