@@ -27,6 +27,75 @@
 
 <body>
 
+  <div id="password-generator">
+
+    <input
+      value="Generateur de MDP"
+      id="password-output"
+    >
+    <!-- longueur du mot de passe : -->
+    <div class="range">
+      <!-- range affiche le curseur -->
+      <input
+        type="range"
+        min="4"
+        max="24"
+        step="1"
+        value="8"
+        id="password-length"
+        oninput="document.getElementById('display-password-length').value=this.value"
+      >
+      <input
+        type="text"
+        value="8"
+        maxlength="2"
+        id="display-password-length"
+        oninput="document.getElementById('password-length').value=this.value"
+      >
+    </div>
+
+    <!-- checkbox pour les options -->
+    <div class="flex">
+
+      <!--
+        relier label et input par l id-->
+
+      <input
+        type="checkbox"
+        id="lowercase"
+        checked='checked'
+      >
+      <label for="lowercase">a-z</label>
+
+
+      <input
+        type="checkbox"
+        id="uppercase"
+      >
+      <label for="uppercase">A-Z</label>
+
+
+      <input
+        type="checkbox"
+        id="numbers"
+      >
+      <label for="numbers">0-9</label>
+
+
+      <input
+        type="checkbox"
+        id="symbols"
+      >
+      <label for="symbols">!-?</label>
+
+      <br>
+      <button
+        id="generateButton"
+        type="button"
+        onclick="generatePassword()"
+      >Générer mot de passe</button>
+    </div>
+  </div>
 
 
 
