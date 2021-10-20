@@ -10,6 +10,8 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   overflow: hidden;
   height: 100vh;
+  /* faire disparaitre la souris */
+  cursor: none;
 }
 nav {
   display: flex;
@@ -41,4 +43,41 @@ h2 {
   background: url(./media/basic-pics/wp4600617.jpg) no-repeat center/cover;
   filter: sepia(70%);
   transition: 3s;
+}
+/* mettre en place action du survol de la souris sur l'image */
+.img:hover {
+  filter: none;
+  transform: scale(1.1);
+}
+p {
+  padding: 3rem 5rem;
+}
+
+/* habiller la souris  */
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #222;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.5s ease;
+  transition-property: background, transform;
+  /* mettre en avant des autres : */
+  z-index: 2;
+  /* mettre un effet dans le rond de la souris */
+  backdrop-filter: brightness(250%);
+}
+
+.link-grow {
+  transform: scale(1.5) translate(-25%, -25%);
+  background: #222;
+  opacity: 0.9;
+  z-index: 2;
+}
+.hovered-link {
+  color: #fff;
+  transition: 0.3 ease-outs;
+  z-index: 3;
 }
